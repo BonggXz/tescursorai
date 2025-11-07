@@ -1,2 +1,0 @@
-# tescursorai
-Uhuy

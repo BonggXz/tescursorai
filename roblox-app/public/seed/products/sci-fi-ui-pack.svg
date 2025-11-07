@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+  <defs>
+    <linearGradient id="bg-sci" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" rx="28" fill="url(#bg-sci)"/>
+  <g fill="none" stroke="#60A5FA" stroke-width="2">
+    <rect x="120" y="100" width="180" height="120" rx="18"/>
+    <rect x="340" y="120" width="180" height="80" rx="14"/>
+    <line x1="160" y1="140" x2="260" y2="140"/>
+    <line x1="160" y1="180" x2="240" y2="180"/>
+  </g>
+  <text x="60" y="260" font-family="Inter, Arial, sans-serif" font-weight="600" font-size="36" fill="#F8FAFC">
+    Sci-Fi UI Pack
+  </text>
+  <text x="60" y="300" font-family="Inter, Arial, sans-serif" font-size="18" fill="#F8FAFCCC">
+    Responsive, futuristic interface components.
+  </text>
+</svg>

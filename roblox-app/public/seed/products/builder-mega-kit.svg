@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+  <defs>
+    <linearGradient id="bg-builder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E40AF"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" rx="28" fill="url(#bg-builder)"/>
+  <g fill="#FFFFFF22">
+    <rect x="120" y="100" width="120" height="80" rx="12"/>
+    <rect x="260" y="140" width="120" height="80" rx="12"/>
+    <rect x="400" y="100" width="120" height="80" rx="12"/>
+    <rect x="200" y="230" width="240" height="60" rx="12"/>
+  </g>
+  <g stroke="#FFFFFF44" stroke-width="2">
+    <line x1="240" y1="120" x2="240" y2="260"/>
+    <line x1="380" y1="120" x2="380" y2="260"/>
+  </g>
+  <text x="60" y="260" font-family="Inter, Arial, sans-serif" font-weight="600" font-size="34" fill="#FFFFFF">
+    Builder Mega Kit
+  </text>
+  <text x="60" y="300" font-family="Inter, Arial, sans-serif" font-size="18" fill="#FFFFFFCC">
+    Modular parts and materials for rapid world building.
+  </text>
+</svg>

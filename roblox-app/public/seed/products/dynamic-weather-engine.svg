@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+  <defs>
+    <linearGradient id="bg-weather" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" rx="28" fill="url(#bg-weather)"/>
+  <g stroke="#FFFFFF" stroke-width="2" fill="none" opacity="0.8">
+    <path d="M160 160c0-35 28-64 64-64 26 0 49 16 59 38 9-4 18-6 28-6 35 0 64 28 64 64" />
+    <line x1="220" y1="240" x2="200" y2="280"/>
+    <line x1="260" y1="240" x2="240" y2="280"/>
+    <line x1="300" y1="240" x2="280" y2="280"/>
+    <line x1="340" y1="240" x2="320" y2="280"/>
+  </g>
+  <text x="60" y="260" font-family="Inter, Arial, sans-serif" font-weight="600" font-size="34" fill="#FFFFFF">
+    Dynamic Weather Engine
+  </text>
+  <text x="60" y="300" font-family="Inter, Arial, sans-serif" font-size="18" fill="#FFFFFFCC">
+    Synced storms, atmosphere presets, and ambient effects.
+  </text>
+</svg>

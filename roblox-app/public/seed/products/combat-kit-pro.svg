@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+  <defs>
+    <linearGradient id="bg-combat" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1D4ED8"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" rx="28" fill="url(#bg-combat)"/>
+  <g fill="none" stroke="#FFFFFF33" stroke-width="2">
+    <circle cx="180" cy="120" r="40"/>
+    <circle cx="460" cy="240" r="36"/>
+    <path d="M120 220h160l40-60 180 120" />
+  </g>
+  <text x="60" y="240" font-family="Inter, Arial, sans-serif" font-weight="600" font-size="38" fill="#FFFFFF">
+    Combat Kit Pro
+  </text>
+  <text x="60" y="280" font-family="Inter, Arial, sans-serif" font-size="18" fill="#FFFFFFCC">
+    Modular combat systems, responsive VFX, and stat tracking.
+  </text>
+</svg>

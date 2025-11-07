@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+  <defs>
+    <linearGradient id="bg-npc" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E40AF"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" rx="28" fill="url(#bg-npc)"/>
+  <g fill="none" stroke="#93C5FD" stroke-width="2">
+    <circle cx="170" cy="160" r="45"/>
+    <circle cx="320" cy="220" r="32"/>
+    <circle cx="470" cy="150" r="40"/>
+    <line x1="208" y1="188" x2="288" y2="210"/>
+    <line x1="352" y1="210" x2="430" y2="176"/>
+  </g>
+  <text x="60" y="260" font-family="Inter, Arial, sans-serif" font-weight="600" font-size="32" fill="#FFFFFF">
+    Advanced NPC Behavior Pack
+  </text>
+  <text x="60" y="300" font-family="Inter, Arial, sans-serif" font-size="18" fill="#FFFFFFCC">
+    Patrols, dialog trees, and smart combat heuristics.
+  </text>
+</svg>

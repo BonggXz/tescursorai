@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+  <defs>
+    <linearGradient id="bg-econ" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0EA5E9"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" rx="28" fill="url(#bg-econ)"/>
+  <g stroke="#FFFFFF" stroke-width="2" fill="none" opacity="0.85">
+    <polyline points="120,240 200,180 280,210 360,150 440,180 520,120"/>
+    <circle cx="120" cy="240" r="6" fill="#FFFFFF"/>
+    <circle cx="200" cy="180" r="6" fill="#FFFFFF"/>
+    <circle cx="280" cy="210" r="6" fill="#FFFFFF"/>
+    <circle cx="360" cy="150" r="6" fill="#FFFFFF"/>
+    <circle cx="440" cy="180" r="6" fill="#FFFFFF"/>
+    <circle cx="520" cy="120" r="6" fill="#FFFFFF"/>
+  </g>
+  <text x="60" y="260" font-family="Inter, Arial, sans-serif" font-weight="600" font-size="32" fill="#FFFFFF">
+    Economy Simulator Framework
+  </text>
+  <text x="60" y="300" font-family="Inter, Arial, sans-serif" font-size="18" fill="#FFFFFFCC">
+    Inventories, crafting, and trading with datastore support.
+  </text>
+</svg>
