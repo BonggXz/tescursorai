@@ -1,0 +1,7 @@
+<!-- Placeholder RBXM content for volumetric weather suite asset -->
+<roblox xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="4">
+	<Meta name="description">Placeholder asset file for volumetric weather suite.</Meta>
+	<Item class="Model" referent="RBX1">
+		<Property name="Name" type="string">VolumetricWeather</Property>
+	</Item>
+</roblox>

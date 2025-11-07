@@ -1,0 +1,8 @@
+<!-- Placeholder RBXM content for modular sci-fi doors asset -->
+<roblox xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="4">
+	<Meta name="description">Placeholder asset file for modular sci-fi doors.</Meta>
+	<Meta name="author">Roblox Studio Community</Meta>
+	<Item class="Model" referent="RBX0">
+		<Property name="Name" type="string">ModularDoor</Property>
+	</Item>
+</roblox>

@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 210 40% 98%;
+  --foreground: 222 47% 11%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 47% 11%;
+  --primary: 217 92% 60%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 222 13% 90%;
+  --secondary-foreground: 222 47% 11%;
+  --muted: 215 16% 82%;
+  --muted-foreground: 215 20% 25%;
+  --accent: 216 100% 94%;
+  --accent-foreground: 222 47% 11%;
+  --destructive: 0 62% 55%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 215 20% 85%;
+  --input: 215 20% 85%;
+  --ring: 217 92% 60%;
+  --chart-1: 217 92% 60%;
+  --chart-2: 222 89% 67%;
+  --chart-3: 207 90% 54%;
+  --chart-4: 199 89% 48%;
+  --chart-5: 189 94% 42%;
+  --radius: 0.75rem;
+}
+
+.dark {
+  --background: 222 47% 13%;
+  --foreground: 210 40% 98%;
+  --card: 222 47% 15%;
+  --card-foreground: 210 40% 98%;
+  --popover: 222 47% 15%;
+  --popover-foreground: 210 40% 98%;
+  --primary: 217 92% 65%;
+  --primary-foreground: 222 47% 13%;
+  --secondary: 217 33% 22%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 217 33% 20%;
+  --muted-foreground: 215 20% 80%;
+  --accent: 217 33% 24%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 72% 45%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 217 33% 24%;
+  --input: 217 33% 24%;
+  --ring: 217 92% 65%;
+  --chart-1: 217 92% 65%;
+  --chart-2: 199 89% 56%;
+  --chart-3: 189 94% 48%;
+  --chart-4: 163 94% 41%;
+  --chart-5: 143 76% 32%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family:
+      var(--font-sans),
+      "Inter",
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-semibold leading-tight tracking-tight;
+  }
+}
