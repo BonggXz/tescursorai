@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 210 40% 98%;
+  --foreground: 222 47% 11%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 47% 11%;
+  --primary: 221 83% 53%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 214 32% 91%;
+  --secondary-foreground: 222 47% 11%;
+  --muted: 214 32% 91%;
+  --muted-foreground: 215 20% 65%;
+  --accent: 214 32% 91%;
+  --accent-foreground: 222 47% 11%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 214 32% 91%;
+  --input: 214 32% 91%;
+  --ring: 221 83% 53%;
+  --radius: 0.75rem;
+}
+
+.dark {
+  --background: 222 47% 11%;
+  --foreground: 0 0% 100%;
+  --card: 224 45% 14%;
+  --card-foreground: 0 0% 100%;
+  --popover: 224 45% 14%;
+  --popover-foreground: 0 0% 100%;
+  --primary: 221 83% 53%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 224 45% 20%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 224 45% 20%;
+  --muted-foreground: 215 20% 80%;
+  --accent: 224 45% 20%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 63% 49%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 224 45% 24%;
+  --input: 224 45% 24%;
+  --ring: 221 83% 53%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+
+  a {
+    @apply text-primary transition-colors hover:text-primary/80;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex h-11 items-center justify-center rounded-lg bg-primary px-6 text-sm font-semibold text-primary-foreground shadow-sm transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 hover:bg-primary/90;
+  }
+
+  .badge {
+    @apply inline-flex items-center rounded-full bg-secondary px-2.5 py-0.5 text-xs font-medium text-secondary-foreground;
+  }
+
+  .card {
+    @apply rounded-xl border border-border bg-card p-6 shadow-sm;
+  }
+
+  .card-hover {
+    @apply transition hover:-translate-y-1 hover:shadow-lg;
+  }
+}
