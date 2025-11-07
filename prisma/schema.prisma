@@ -1,0 +1,124 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String        @id @default(cuid())
+  name         String?
+  email        String        @unique
+  passwordHash String
+  role         String        @default("USER") // "USER" | "ADMIN"
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+  accounts     Account[]
+  sessions     Session[]
+  downloads    Download[]
+  auditEvents  AuditEvent[]
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String?
+  access_token      String?
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String?
+  session_state     String?
+  user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+model Product {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  title       String
+  description String
+  priceCents  Int
+  images      String   @default("[]") // JSON array stored as string
+  robloxAssetId String?
+  categories  String   @default("[]") // JSON array
+  tags        String   @default("[]") // JSON array
+  status      String   @default("DRAFT") // "DRAFT" | "PUBLISHED" | "ARCHIVED"
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Asset {
+  id            String   @id @default(cuid())
+  slug          String   @unique
+  title         String
+  description   String   // MDX body
+  version       String   @default("1.0.0")
+  files         String   @default("[]") // JSON array of FileRef
+  categories    String   @default("[]") // JSON array
+  tags          String   @default("[]") // JSON array
+  license       String   @default("MIT")
+  status        String   @default("DRAFT") // "DRAFT" | "PUBLISHED" | "ARCHIVED"
+  downloadCount Int      @default(0)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model SiteSettings {
+  id                String   @id @default("singleton")
+  siteName          String   @default("Roblox Studio Community")
+  logoUrl           String?
+  heroTitle         String   @default("Build together. Share faster.")
+  heroSubtitle      String   @default("A modern hub for Roblox Studio creators.")
+  featuredProductIds String  @default("[]") // JSON array
+  featuredAssetIds  String   @default("[]") // JSON array
+  socials           String   @default("{}") // JSON object
+  primaryColor      String   @default("#2563EB")
+  updatedAt         DateTime @updatedAt
+}
+
+model Download {
+  id        String   @id @default(cuid())
+  userId    String?
+  user      User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
+  assetId   String
+  ip        String?
+  ua        String?
+  createdAt DateTime @default(now())
+}
+
+model AuditEvent {
+  id        String   @id @default(cuid())
+  actorId   String?
+  actor     User?    @relation(fields: [actorId], references: [id], onDelete: SetNull)
+  entity    String   // "Product" | "Asset" | "Settings" | "User"
+  entityId  String
+  action    String   // "CREATE" | "UPDATE" | "DELETE" | "PROMOTE" | ...
+  diff      String?  @default("{}") // JSON object
+  createdAt DateTime @default(now())
+}
